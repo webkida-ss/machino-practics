@@ -1,6 +1,5 @@
 .news-archive{ 
 
-
     &__list{
         margin-top: 30px;
     }
@@ -12,10 +11,16 @@
             display: flex;
         }
         &--link{
-        
+        // 
+        }
+        &--term{
+            text-align: center;
+            width: 80px;
+            background: $light-gray;
+            
         }
         &--date{
-        
+            margin-left: 20px;
         }
         &--title{
             margin-left: 20px;
