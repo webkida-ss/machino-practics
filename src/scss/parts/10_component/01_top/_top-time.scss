@@ -1,0 +1,39 @@
+.top-time{
+    $table-border: 1px solid $silver;
+    &__table{
+        padding: 10px;
+        
+        table{
+            width: 100%;
+            table-layout: fixed;// 基本的に均等配置
+            // テーブルヘッダー
+            th{
+                border: $table-border;
+                text-align: center;
+                padding: 10px 0;
+                &:first-child{
+                    width: 200px;
+                }
+                &:not(:first-child){
+                    background: $light-gray;
+                }
+            }
+            // テーブルデータ
+            td{
+                border: $table-border;
+                text-align: center;
+                padding: 10px 0;
+                &:first-child{
+                    background: $light-gray;
+                    // color: $white;
+                    width: 200px;
+                }
+            }
+        }
+
+        &--message{
+            margin-top: 10px;
+        }
+    }
+
+}

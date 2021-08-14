@@ -1,0 +1,25 @@
+.news-archive{ 
+
+
+    &__list{
+        margin-top: 30px;
+    }
+
+    &__item{
+        padding: 10px 0;
+        border-bottom: 1px solid $light-gray;
+        a{
+            display: flex;
+        }
+        &--link{
+        
+        }
+        &--date{
+        
+        }
+        &--title{
+            margin-left: 20px;
+        }
+
+    }
+}

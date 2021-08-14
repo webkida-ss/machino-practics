@@ -1,0 +1,47 @@
+.archive-news{ 
+
+    &__navi{
+        margin-top: 20px;
+        .pages{
+            display: none;
+        }
+        .page,
+		.current,
+		.previouspostslink,
+		.nextpostslink{
+            border-width: 1px;
+			border-style: solid;
+			border-color: $blue;
+			font-weight: $font-weight-bold;
+			font-size: 1.2rem;
+			line-height: 1.2px;
+			transition: all $transition-change-time ease 0s;
+        }
+		// 現在ページ
+		.current {
+			background-color: $blue;
+			color: $white;
+			border-color: $blue !important;
+		}
+		// その他ページ
+		.page {
+			color: $blue;
+			&:hover {
+				background-color: $blue;
+				color: $white;
+				border-color: $blue !important;
+			}
+		}
+		// 前後ボタン
+		.previouspostslink,
+		.nextpostslink {
+			color: $blue;
+			&:hover {
+				background-color: $blue;
+				color: $white;
+				border-color: $blue !important;
+			}
+		}
+
+    }
+}

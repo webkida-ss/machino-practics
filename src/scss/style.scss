@@ -1,0 +1,25 @@
+@charset 'UTF-8';
+
+// config
+@import 'config/_setting';// 基本設定
+@import 'config/_mixin';// ミックスイン
+@import 'config/_function';// ファンクション
+@import 'config/_placeholder';// プレースホルダー
+@import 'config/_initialize';// 初期化
+@import 'config/_common';// 共通系
+
+// parts/common：共通
+@import 'parts/00_common/_header';// ヘッダー
+@import 'parts/00_common/_footer';// フッター
+@import 'parts/00_common/_nav';// ナビゲーション
+@import 'parts/00_common/_breadcrumb';// パンくず
+
+// parts/component：コンポネント
+// トップページ
+@import 'parts/10_component/01_top/_top';
+@import 'parts/10_component/01_top/_top-time';
+@import 'parts/10_component/01_top/_top-msg';
+
+// ニュース
+@import 'parts/10_component/02_news/_archive-news';
+@import 'parts/10_component/02_news/_news-archive';// 部品

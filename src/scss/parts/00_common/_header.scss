@@ -1,0 +1,134 @@
+.header {
+	// ------------------------------------------------------------
+	// 固定する場合はfixかつ、bodyにpadding-topついてるかチェック
+	// ------------------------------------------------------------
+	// position: fixed;// ヘッダー位置固定
+	// top: 0;
+	// left: 0;
+	z-index: map-get($layer,header);
+	width: 100%;
+	// height: $header-height-pc;
+	// padding: *px 0;
+
+	@include mq(sp) {
+		height: $header-height-sp;
+	}
+
+
+	// ヘッダー上部 -------------------------------------------------------
+	&__upper{
+		padding: 5px 0;
+		background: $blue;
+		color: $white;
+		
+		&--inner{
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+		h1{
+			font-weight: normal;
+		}
+		&--sitemap{
+			// 
+		}
+	}
+
+	// ヘッダー下部 -------------------------------------------------------
+	&__lower {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 10px 0;
+	}
+	&__title {
+		// ロゴなら
+		width: 100px;
+		height: 100px;
+		transition: opacity $transition-change-time ease 0s;
+		img {
+			width: 100%;
+			height: 100%;
+		}
+
+		&:hover {
+			opacity: .6;
+			cursor: pointer;
+		}
+	}
+	&__content{
+		display: flex;
+		align-items: center;
+	}
+	&__info{
+		margin-right: 20px;
+		div{
+			&:not(:first-child){
+				margin-top: 8px;
+			}
+		}
+		&--address{
+		// 
+		}
+		&--phone{
+			$info-tel-size: 20px;
+			font-size: 2rem;
+			font-weight: $font-weight-bold;
+			padding-left: $info-tel-size + 10px;
+			position: relative;
+			&::before{
+				display: block;
+				content: '';
+				width: $info-tel-size;
+				height: $info-tel-size;
+				position: absolute;
+				top: 0;
+				left: 0;
+				background-image: url(../img/電話.png);
+				background-size: cover;
+				background-repeat: no-repeat;
+				background-position: center;
+			}
+		}
+
+		// 疑似要素
+		$info-pseudo-size: 80px;
+		%info-pseudo{
+			position: relative;
+			padding-left: $info-pseudo-size + 10px;
+			padding: 3px 0;
+			&::before{
+				padding: 3px 0;
+				background: #c9be72;
+				text-align: center;
+				display: inline-block;
+				width: $info-pseudo-size;
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+		}
+		
+		&--time{
+			@extend %info-pseudo;
+			&::before{
+				content: '営業時間';
+			}		
+		}
+		&--holiday{
+			@extend %info-pseudo;
+			&::before{
+				content: '定休日';
+			}		
+		}
+	}
+	&__reserve{
+		display: flex;
+		align-items: center;
+		&--img{
+			width: 50px;
+			height: 50px;
+		}
+		
+	}
+}
