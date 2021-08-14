@@ -130,8 +130,18 @@
 								)
 							)
 						);
-						$the_query = get_posts($args); // 投稿取得
-						get_template_part('src-php/20_component/02_news/_news-archive', null, $the_query); // お知らせ一覧
+						$the_query = get_posts($args); // お知らせアーカイブ取得
+						if ($the_query) :
+						?>
+							<ul class="top-news__list">
+								<?php
+								foreach ($the_query as $post) : setup_postdata($post);
+									get_template_part('src-php/20_component/02_news/_news-item');
+								endforeach;
+								?>
+							</ul>
+						<?php
+						endif;
 						wp_reset_query();
 						?>
 					</div>

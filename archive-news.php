@@ -27,17 +27,18 @@
 				<!-- 投稿一覧を表示 -->
 				<section class="section archive-news">
 					<h3 class="section__title">お知らせ：全て</h3>
-					<?php
-					$args = array(
-						'post_type' => 'news',
-						'order' => 'DESC',
-						'posts_per_page' => 5 // 無制限
-					);
-					$the_query = get_posts($args); // お知らせアーカイブ取得
-					get_template_part('src-php/20_component/02_news/_news-archive', null, $the_query);
-					wp_reset_query();
-					?>
-					<div class="archive-news__navi"><?php wp_pagenavi(); ?></div>
+					<div class="archive-news__content">
+						<?php if (have_posts()) : ?>
+							<ul class="archive-news__list">
+								<?php
+								while (have_posts()) : the_post();
+									get_template_part('src-php/20_component/02_news/_news-item');
+								endwhile;
+								?>
+							</ul>
+						<?php endif; ?>
+						<div class="archive-news__navi"><?php wp_pagenavi(); ?></div>
+					</div>
 				</section>
 			</main>
 

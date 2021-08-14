@@ -1,0 +1,22 @@
+.news-item {
+	padding: 10px 0;
+
+	border-bottom: 1px solid $light-gray;
+	a {
+		display: flex;
+	}
+	&__link {
+		// 
+	}
+	&__term {
+		width: 80px;
+		background: $light-gray;
+		text-align: center;
+	}
+	&__date {
+		margin-left: 20px;
+	}
+	&__title {
+		margin-left: 20px;
+	}
+}
