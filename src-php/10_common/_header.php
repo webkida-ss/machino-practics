@@ -3,7 +3,7 @@
 	<!-- ヘッダー上部 -->
 	<div class="header__upper">
 		<div class="inner header__upper--inner">
-			<h1>街之接骨院は東京都新宿区にある整骨院です。ご気軽に相談、診察に起こしください。</h1>
+			<h1>街之接骨院は東京都新宿区にある整骨院です。ご気軽に相談・診察にお越しください。</h1>
 			<div class="header__sitemap"><a href="">サイトマップ</a></div>
 		</div>
 	</div>
@@ -11,7 +11,9 @@
 	<div class="inner header__lower">
 		<!-- ロゴ -->
 		<h2 class="header__title">
-			<img src="<?php echo esc_url(get_template_directory_uri() . '/dist/img/ロゴ.png'); ?>" alt="ロゴ">
+			<a href="<?php echo esc_url(home_url()) ?>">
+				<img src="<?php echo esc_url(get_template_directory_uri() . '/dist/img/ロゴ.png'); ?>" alt="ロゴ">
+			</a>
 		</h2>
 		<!-- 内容 -->
 		<div class="header__content">
@@ -27,7 +29,7 @@
 				<div class="header__reserve--img">
 					<img src="<?php echo esc_url(get_template_directory_uri() . '/dist/img/LINE.png'); ?>" alt="LINEロゴ">
 				</div>
-				<span>Lineでのご予約・お問い合わせ</span>
+				<span>LINEでのご予約・お問い合わせ</span>
 			</div>
 		</div>
 	</div>

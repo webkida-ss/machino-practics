@@ -26,5 +26,9 @@
         &:first-child(){
             border-left: 1px solid $blue;
         }
+        &:hover{
+            background: $light-gray;
+        }    
+
     }
 }

@@ -11,8 +11,8 @@
 		<!-------------------------------------------------- 
 		- ヘッダー|ナビゲーション|パンくずリスト
 		---------------------------------------------------->
-		<?php get_template_part('src-php/00_common/_header'); ?>
-		<?php get_template_part('src-php/00_common/_nav'); ?>
+		<?php get_template_part('src-php/10_common/_header'); ?>
+		<?php get_template_part('src-php/10_common/_nav'); ?>
 
 		<!-- トップ -->
 		<section class="top">
@@ -116,30 +116,26 @@
 
 				<!-- お知らせ：最新の5件を取得 -->
 				<section class="section top-news">
-					<h3 class="section__title">お知らせ</h3>
+					<h3 class="section__title">お知らせ：重要！</h3>
 					<div class="top-news__content">
 						<?php
 						$args = array(
-							'post-type' => 'news', // 投稿タイプ：お知らせ
-							'posts_per_page' => '5', // 取得件数
+							'post_type' => 'news', // 投稿タイプ：お知らせ
 							'order' => 'DESC',
 							'tax_query' => array( // タクソノミー指定
 								array(
-									'taxonomy' => 'news-kind', // お知らせ種別
+									'taxonomy' => 'news_kind', // お知らせ種別
 									'field' => 'slug',
 									'terms' => 'important' // 重要
 								)
 							)
 						);
 						$the_query = get_posts($args); // 投稿取得
-						if ($the_query) :
+						get_template_part('src-php/20_component/02_news/_news-archive', null, $the_query); // お知らせ一覧
+						wp_reset_query();
 						?>
-							<?php get_template_part('src-php/10_component/02_news/_news-archive'); ?>
-							<?php wp_reset_query(); ?>
-						<?php endif; ?>
 					</div>
 				</section>
-
 			</main>
 
 			<!-------------------------- 
@@ -152,7 +148,7 @@
 		<!-------------------------------------------------- 
 		- フッター
 		---------------------------------------------------->
-		<?php get_template_part('src-php/00_common/_footer'); ?>
+		<?php get_template_part('src-php/10_common/_footer'); ?>
 	</div><!-- /.wrapper -->
 
 	<?php get_footer(); ?>

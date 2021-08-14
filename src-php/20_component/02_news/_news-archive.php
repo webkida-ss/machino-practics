@@ -1,14 +1,17 @@
+<?php
+$the_query = $args; // 引数で投稿を渡す
+?>
 <div class="news-archive">
-	<?php if (have_posts()) : ?>
+	<?php if ($the_query) : ?>
 		<ul class="news-archive__list">
-			<?php while (have_posts()) : the_post(); ?>
+			<?php foreach ($the_query as $post) : setup_postdata($post); ?>
 				<li class="news-archive__item">
 					<a href="<?php the_permalink(); ?>" class="news-archive__item--link">
 						<date class="news-archive__item--date"><?php echo get_the_date(); ?></date>
 						<p class="news-archive__item--title"><?php the_title(); ?></p>
 					</a>
 				</li>
-			<?php endwhile; ?>
+			<?php endforeach; ?>
 		</ul>
 	<?php endif; ?>
 </div>

@@ -8,18 +8,23 @@
 @import 'config/_initialize';// 初期化
 @import 'config/_common';// 共通系
 
-// parts/common：共通
-@import 'parts/00_common/_header';// ヘッダー
-@import 'parts/00_common/_footer';// フッター
-@import 'parts/00_common/_nav';// ナビゲーション
-@import 'parts/00_common/_breadcrumb';// パンくず
 
-// parts/component：コンポネント
+// WPテンプレート ----------------------------------------------
+@import 'parts/00_template/_archive-news';
+@import 'parts/00_template/_single-news';
+
+// 共通系 -----------------------------------------------------
+@import 'parts/10_common/_header';// ヘッダー
+@import 'parts/10_common/_footer';// フッター
+@import 'parts/10_common/_nav';// ナビゲーション
+@import 'parts/10_common/_breadcrumb';// パンくず
+
+// 部品系 ------------------------------------------------------
+
 // トップページ
-@import 'parts/10_component/01_top/_top';
-@import 'parts/10_component/01_top/_top-time';
-@import 'parts/10_component/01_top/_top-msg';
+@import 'parts/20_component/01_top/_top';
+@import 'parts/20_component/01_top/_top-time';
+@import 'parts/20_component/01_top/_top-msg';
 
 // ニュース
-@import 'parts/10_component/02_news/_archive-news';
-@import 'parts/10_component/02_news/_news-archive';// 部品
+@import 'parts/20_component/02_news/_news-archive';// 部品
