@@ -116,7 +116,7 @@
 
 				<!-- お知らせ：最新の5件を取得 -->
 				<section class="section top-news">
-					<h3 class="section__title">お知らせ：重要！</h3>
+					<h3 class="section__title">お知らせ</h3>
 					<div class="top-news__content">
 						<?php
 						$args = array(

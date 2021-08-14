@@ -26,8 +26,13 @@
 				<section class="section single-news">
 					<h3 class="section__title"><?php the_title(); ?></h3>
 					<div class="single-news__content">
-						<date class="single-news__date"><?php echo get_the_date(); ?></date>
-						<p class="single-news__text"><?php the_content(); ?></p>
+						<p class="single-news__term">
+							<?php echo get_the_terms($post->ID, 'news_kind')[0]->name; ?>
+						</p>
+						<time class="single-news__date"><?php echo get_the_date(); ?></time>
+						<div class="single-news__text">
+							<?php the_content(); ?>
+						</div>
 					</div>
 				</section>
 			</main>

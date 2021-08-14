@@ -23,21 +23,9 @@
 			- メイン
 			---------------------------->
 			<main class="main">
-
-				<!-- 投稿一覧を表示 -->
-				<section class="section archive-news">
-					<h3 class="section__title">お知らせ</h3>
-					<div class="archive-news__content">
-						<?php if (have_posts()) : ?>
-							<ul class="archive-news__list">
-								<?php
-								while (have_posts()) : the_post();
-									get_template_part('src-php/20_component/02_news/_news-item');
-								endwhile;
-								?>
-							</ul>
-						<?php endif; ?>
-						<div class="archive-news__navi"><?php wp_pagenavi(); ?></div>
+				<section class="section page-contact">
+					<h3 class="section__title"><?php the_title(); ?></h3>
+					<div class="page-contact__content">
 					</div>
 				</section>
 			</main>

@@ -1,0 +1,16 @@
+.single-news{
+    &__content{
+        margin-top: 20px;
+    }
+    &__term{
+        // margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    &__date{
+        // margin-top: 20px;
+    }
+    &__text{
+        margin-top: 20px;
+        line-height: 1.6;
+    }
+}
