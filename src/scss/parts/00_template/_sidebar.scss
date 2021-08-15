@@ -1,0 +1,19 @@
+.sidebar{
+
+    // ボタン ---------------------------------------------
+    .wp-block-buttons{
+        .wp-block-button{
+            width: 100%;
+            a{
+                border-radius: 0;
+                display: block;
+                border-color: $blue;
+                color: $blue;
+                &:hover{
+                    color: $white;
+                    background: $blue;
+                }
+            }
+        }
+    }
+}

@@ -190,17 +190,20 @@ $util-link-border-size: 3px;
 .container {
 	margin-top: 20px;
 	display: flex;
+	justify-content: space-between;// 両端寄せ
 }
 
-$sidebar-width-pc: 250px;
+$sidebar-width-pc: 230px;
 $sidebar-width-tab: 150px;
 $sidebar-width-sp: 100px;
+
+$container-margin-width-pc: 20px;
 
 // ------------------------------------------------------------
 // main
 // ------------------------------------------------------------
 .main {
-	width: getMinus100Percent($sidebar-width-pc);
+	width: getMinus100Percent($sidebar-width-pc + $container-margin-width-pc );
 }
 
 // ------------------------------------------------------------
