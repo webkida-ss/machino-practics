@@ -26,6 +26,8 @@
 				<section class="section page-contact">
 					<h3 class="section__title"><?php the_title(); ?></h3>
 					<div class="page-contact__content">
+						<!-- ショートコード直指定 -->
+						<?php echo do_shortcode('[mwform_formkey key="68"]'); ?>
 					</div>
 				</section>
 			</main>
