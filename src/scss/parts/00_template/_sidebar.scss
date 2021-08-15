@@ -1,19 +1,71 @@
-.sidebar{
+.sidebar {
+	$sidebar-border: 1px solid $silver;
+	// ボタン ---------------------------------------------
+	.wp-block-buttons {
+		.wp-block-button {
+			position: relative;
+			width: 100%;
+			a {
+				display: block;
+				border-color: $blue;
+				border-radius: 0;
+				&:hover {
+					background: $blue;
+				}
+			}
 
-    // ボタン ---------------------------------------------
-    .wp-block-buttons{
-        .wp-block-button{
-            width: 100%;
-            a{
-                border-radius: 0;
-                display: block;
-                border-color: $blue;
-                color: $blue;
-                &:hover{
-                    color: $white;
-                    background: $blue;
-                }
-            }
-        }
-    }
+			&.btn-contact,
+			&.btn-introduction {
+				&::before {
+					display: block;
+					position: absolute;
+					top: 50%;
+					left: 10px;
+					transform: translateY(-50%);
+					width: 20px;
+					height: 20px;
+					background-position: center;
+					background-size: cover;
+					background-repeat: no-repeat;
+					content: '';
+				}
+			}
+			&.btn-contact {
+				&::before {
+					background-image: url(../img/お問い合わせ.png);
+				}
+			}
+			&.btn-introduction {
+				&::before {
+					background-image: url(../img/店舗紹介.png);
+				}
+			}
+		}
+	}
+
+
+	// カレンダー ---------------------------------------------
+	.widget_calendar {
+		border: $sidebar-border;
+	}
+
+	// 店舗紹介
+	.introduction {
+		border: $sidebar-border;
+	}
+
+	// リンク ---------------------------------------------
+	.links {
+		border: $sidebar-border;
+	}
+
+	// Twitter ---------------------------------------------
+	.twitter {
+		border: $sidebar-border;
+		.wp-block-group__inner-container {
+			p {
+				text-align: center;
+			}
+		}
+	}
 }
