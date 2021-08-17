@@ -1,0 +1,154 @@
+.contact {
+	margin-top: 20px;
+
+	input,textarea{
+		margin-top: 5px;
+		margin-bottom: 10px;
+	}
+
+	// ラジオボタン、チェックボックス以外は、横幅いっぱい
+	input:not([type='radio']):not([type='checkbox']),
+	textarea {
+		width: 100%;
+		letter-spacing: 0.1em;
+		&:hover,
+		&:focus {
+			border: 1px solid $yellow;
+			box-shadow: 0px 0px 5px 0px $yellow;
+			outline: none;
+		}
+	}
+	input {
+		
+		height: 40px;
+		padding: 5px 10px;
+	}
+	textarea {
+		padding: 10px;
+		line-height: 1.6;
+		white-space: pre-wrap;// textareaに改行あり
+		
+	}
+	// ラジオボタン
+	.mw_wp_form .horizontal-item{
+		margin-top: 5px;
+		margin-left: 40px !important;
+		margin-bottom: 10px;
+		display: inline-block;
+		position: relative;
+
+		label{
+			display: inline-block;
+			cursor: pointer;
+
+			input[type='radio']{
+				display: none;
+				// ホバー時
+				&:hover {
+					& + span{
+						&::before,&::after{
+							border-color: $yellow;
+							box-shadow: 0px 0px 5px 0px $yellow;
+						}
+					}
+				}	
+
+				// チェック時
+				&:checked {
+					& + span{
+						&::after{
+							background: $blue;
+						}
+					}
+				}			
+			}
+
+			span{
+				&::before,&::after{
+					transition: all $transition-change-time ease 0s;
+					display: block;
+					content: '';
+					position: absolute;
+					border-width: 1px;
+					border-style: solid;
+					border-radius: 50%;
+				}
+				&::before{
+					width: 15px;
+					height: 15px;
+					top: 50%;
+					left: -30px;
+					transform: translateY(-50%);
+					border-color: $blue;
+				}
+				&::after{
+					width: 7px;
+					height: 7px;
+					top: 50%;
+					left: -26px;
+					transform: translateY(-50%);
+					border-color: $blue;
+				}
+	
+			}	
+		}
+	}
+
+	// プレビュー
+	.mw_wp_form_preview {
+		form{
+			p:nth-child(odd){// 奇数
+				margin-bottom: 5px;
+			}
+			p:nth-child(even){// 偶数
+				margin-bottom: 20px;
+			}
+		}
+	}
+	.mw_wp_form_complete{
+		p{
+			font-size: 2rem;
+			text-align: center;
+			color: $yellow;
+		}
+	}
+
+	// ボタン
+	button{
+		display: block;
+		width: $util-link-width-pc;
+		height: $util-link-height-pc;
+		margin: 0 auto;
+		font-weight: $font-weight-bold;
+		line-height: getLineHeightForBox($util-link-height-pc, $util-link-border-size);
+		text-align: center;
+		border-width: $util-link-border-size;
+		border-style: solid;
+		border-color: $blue;
+		transition: all $transition-change-time ease 0s;
+		background: $blue;
+		color: $white;
+
+		@include mq(sp) {
+			width: $util-link-width-sp;
+			height: $util-link-height-sp;
+			// font-size: *rem;
+			line-height: getLineHeightForBox($util-link-height-sp, $util-link-border-size);
+		}
+		&:hover {
+			background: $white;
+			color: $blue;
+			cursor: pointer;
+		}
+		// 戻るボタン
+		&.contact__back{
+			margin: 0 auto 10px;
+			border-color: $silver;
+			background: $silver;
+			&:hover {
+				background: $white;
+				color: $silver;
+			}
+		}
+	}
+}

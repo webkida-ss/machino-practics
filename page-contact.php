@@ -26,8 +26,7 @@
 				<section class="section page-contact">
 					<h3 class="section__title"><?php the_title(); ?></h3>
 					<div class="page-contact__content">
-						<!-- ショートコード直指定 -->
-						<?php echo do_shortcode('[mwform_formkey key="68"]'); ?>
+						<?php get_template_part('src-php/20_component/03_contact/_contact'); ?>
 					</div>
 				</section>
 			</main>
@@ -36,7 +35,7 @@
 			- サイドバー
 			---------------------------->
 			<?php get_sidebar(); ?>
-
+			
 		</div><!-- /.container -->
 
 		<!-------------------------------------------------- 
