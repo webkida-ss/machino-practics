@@ -26,8 +26,31 @@
         &:first-child(){
             border-left: 1px solid $blue;
         }
+
+        // ホバー時 ---------------------------
+        position: relative;
+        overflow: hidden;
+        &::before{
+            content: '';
+            /*絶対配置で位置を指定*/
+            position: absolute;
+            top: 0;
+            left: -130%;
+            /*色や形状*/
+            background:$light-gray;
+            width:120%;
+            height: 100%;
+            transform: skewX(-25deg);
+        }
         &:hover{
-            background: $light-gray;
+            &::before{
+                animation: skewanime .5s forwards;/*アニメーションの名前と速度を定義*/
+            }
+            @keyframes skewanime {
+                100% {
+                    left:-10%;/*画面の見えていない左から右へ移動する終了地点*/
+                }
+            }
         }    
 
     }
