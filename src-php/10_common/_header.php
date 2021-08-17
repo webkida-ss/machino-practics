@@ -4,7 +4,7 @@
 	<div class="header__upper">
 		<div class="inner header__upper--inner">
 			<h1>街之接骨院は東京都新宿区にある整骨院です。ご気軽に相談・診察にお越しください。</h1>
-			<div class="header__sitemap"><a href="">サイトマップ</a></div>
+			<div class="header__sitemap"><a href="<?php echo esc_url(home_url() . '/sitemap'); ?>">サイトマップ</a></div>
 		</div>
 	</div>
 	<!-- ヘッダー上部 -->

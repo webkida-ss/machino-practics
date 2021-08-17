@@ -1,0 +1,40 @@
+.page-sitemap{
+
+    &__content{
+    
+    }
+    &__list{
+        margin-top: 20px;
+        position: relative;
+        position: relative;
+        &::before{
+            display: block;
+            content: '';
+            position: absolute;
+            width: 1px;
+            height: 120px;
+            border-left: 1px solid $silver;
+            left: 10px;
+            bottom: -5px;
+        }
+    }
+    &__item{
+        
+        &:not(:first-child){
+            margin-top: 10px;
+            margin-left: 30px;
+            position: relative;
+            &::before{
+                display: block;
+                content: '';
+                position: absolute;
+                width: 10px;
+                height: 1px;
+                border-bottom: 1px solid $silver;
+                left: -15px;
+                top: 8px;
+            }
+        }
+    }
+
+}
