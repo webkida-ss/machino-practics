@@ -1,11 +1,11 @@
 .nav{
     padding: 30px 0 0;
 
-    ul{
+    &__list{
         display: flex;
         justify-content: space-around;
     }
-    li{
+    &__item{
         width: calc(100% / 6);// 幅を6等分
         text-align: center;
         padding: 5px 0;
