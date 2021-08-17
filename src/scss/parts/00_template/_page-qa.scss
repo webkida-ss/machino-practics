@@ -1,3 +1,57 @@
 .page-qa{
 
+    &__list{
+        margin-top: 40px;
+    }
+    &__item{
+        margin-top: 20px;
+        background: $blue;
+        color: $white;
+
+        &--head{
+            padding: 10px;
+            cursor: pointer;
+            background: $blue;
+            color: $white;
+            position: relative;
+            &::before,&::after{
+                display: block;
+                content: '';
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 20px;
+                height: 1px;
+                right: 20px;
+                border-bottom: 1px solid $white;
+                transition: all $transition-change-time ease 0s;
+                
+            }
+
+            // 閉じているとき：+
+            &::before{
+            }
+            &::after{
+                transform: rotate(90deg);
+            }
+            // 開いているとき：-
+            &.is-open{
+                &::before{
+                    transform: rotate(45deg);
+                }
+                &::after{
+                    transform: rotate(-45deg);
+                }    
+            }
+            
+        }
+        &--body{
+            padding: 10px;
+            display: none;
+            background: $white;
+            color: $blue;
+            border: 1px solid $blue;
+        }
+
+    }
 }

@@ -30,17 +30,6 @@ jQuery(function () {
 	});
 
 	/*********************************************
-	 * フローティングアイテム
-	 *********************************************/
-	jQuery(window).on("scroll", function () {
-		if (jQuery(this).scrollTop() > 200) {
-			jQuery('.util__floating').addClass('is-show');
-		} else {
-			jQuery('.util__floating').removeClass('is-show');
-		}
-	});
-
-	/*********************************************
 	 * ドロワー
 	 * jQuery
 	 *********************************************/
@@ -63,14 +52,17 @@ jQuery(function () {
 		}
 	});
 
+
 	/*********************************************
 	 * アコーディオン
 	 * jQuery
 	 *********************************************/
 	jQuery('.js-accordion').click(function () {
-		// anwserの表示制御
-		jQuery(this).children('.').next().slideToggle();
-		// 直下のquestion-textの表示制御
-		jQuery(this).find('.').toggleClass('is-open');
+
+		// 解答結果の表示
+		jQuery(this).next().slideToggle(); // display: none;を制御
+
+		// ヘッドの表示制御
+		jQuery(this).toggleClass('is-open');
 	});
 })
