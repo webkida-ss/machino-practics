@@ -1,0 +1,27 @@
+.introduction-overview {
+    padding: 20px 0;
+    &__content{
+    
+    }
+    
+    &__table{
+        margin-top: 20px;
+        width: 100%;
+        tbody{
+            // width: 100%;
+        }
+        th,td{
+            padding: 10px;
+            border: 1px solid $silver;
+            vertical-align: middle;
+        }
+        th{
+            color: $white;
+            width: 100px;
+            text-align: left;
+            background: $yellow;
+            
+        }
+    }
+    
+}

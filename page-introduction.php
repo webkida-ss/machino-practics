@@ -28,7 +28,18 @@
 					<div class="page-introduction__content">
 					</div>
 				</section>
+
+				<!-- 院長挨拶 -->
+				<?php get_template_part('src-php/20_component/04_introduction/_introduction-director'); ?>
+
+				<!-- 店舗概要 -->
+				<?php get_template_part('src-php/20_component/04_introduction/_introduction-overview'); ?>
+
+				<!-- アクセス -->
+				<?php get_template_part('src-php/20_component/04_introduction/_introduction-access'); ?>
+
 			</main>
+
 
 			<!-------------------------- 
 			- サイドバー
