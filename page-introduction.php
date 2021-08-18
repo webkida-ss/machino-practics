@@ -26,6 +26,12 @@
 				<section class="section page-introduction">
 					<h3 class="section__title"><?php the_title(); ?></h3>
 					<div class="page-introduction__content">
+						<div class="page-introduction__img">
+							<img src="<?php echo the_field('introduction_img'); ?>" alt="店舗紹介">
+						</div>
+						<div class="page-introduction__msg">
+							<?php echo the_field('introduction_msg'); ?>
+						</div>
 					</div>
 				</section>
 

@@ -1,2 +1,17 @@
 .introduction-director {
+    &__content{
+        margin-top: 20px;
+        display: flex;
+    }
+    &__img{
+        width: 200px;
+        height: 200px;
+        img{
+            width: 100%;
+        }
+    }
+    &__msg{
+        padding-left: 20px;
+        width: calc(100% - 200px);
+    }
 }
