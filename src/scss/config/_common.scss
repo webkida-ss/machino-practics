@@ -105,7 +105,7 @@
 // ------------------------------------------------------------
 // util
 // ------------------------------------------------------------
-$util-link-width-pc: 100px;
+$util-link-width-pc: 150px;
 $util-link-height-pc: 50px;
 $util-link-width-sp: $util-link-width-pc;
 $util-link-height-sp: $util-link-height-pc;
@@ -134,13 +134,14 @@ $util-link-border-size: 3px;
 			height: 100%;
 			border-width: $util-link-border-size;
 			border-style: solid;
-			border-color: $black;
+			border-color: $blue;
+			color: $blue;
 			transition: all $transition-change-time ease 0s;
-			&:hover {
-				border-color: $white;
-				background: $black;
-				color: $white;
-			}
+			// &:hover {
+			// 	border-color: $blue;
+			// 	background: $blue;
+			// 	color: $white;
+			// }
 		}
 	}
 }
