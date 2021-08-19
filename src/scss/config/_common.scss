@@ -137,11 +137,42 @@ $util-link-border-size: 3px;
 			border-color: $blue;
 			color: $blue;
 			transition: all $transition-change-time ease 0s;
-			// &:hover {
-			// 	border-color: $blue;
-			// 	background: $blue;
-			// 	color: $white;
-			// }
+
+			position: relative;
+            span{
+                display: block;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                // 3D
+                transform-style: preserve-3d;
+                transition: 0.5s;
+                &:first-child{
+                    // はじめは回転なし
+                    transform: rotateX(0deg);
+                    transform-origin: 50px 50% -25px;
+                    background: $white;
+                }
+                &:nth-child(2){
+                    transform: rotateX(90deg);
+                    transform-origin: 0 50% -25px;
+                    background: $blue;
+                    color: $white;
+                }
+            }
+            // rotateX(90deg)している方は裏側にいくため、spanからだとホバーできないのでaタグにhover
+            &:hover{
+                span{
+                    &:first-child{
+                        transform: rotateX(-90deg);
+                    }
+                    &:nth-child(2){
+                        transform: rotateX(0deg);
+                    }
+                }
+                border-color: $white;
+            }
+
 		}
 	}
 }
