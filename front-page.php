@@ -115,7 +115,7 @@
 				<!-- お知らせ：最新の5件を取得 -->
 				<section class="section top-news">
 					<h3 class="section__title">お知らせ</h3>
-					<div class="top-news__content">
+					<div class="top-news__container">
 						<?php
 						$args = array(
 							'post_type' => 'news', // 投稿タイプ：お知らせ
@@ -142,6 +142,12 @@
 						endif;
 						wp_reset_query();
 						?>
+					</div>
+					<div class="util__link top-news__link">
+						<a href="<?php echo esc_url(home_url() . '/news'); ?>">
+							<span>もっと見る</span>
+							<span>もっと見る</span>
+						</a>
 					</div>
 				</section>
 			</main>

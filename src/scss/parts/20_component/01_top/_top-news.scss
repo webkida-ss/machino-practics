@@ -1,5 +1,9 @@
 .top-news{
-    &__content{
+    &__container{
+		margin-top: 20px;
+	}
+	
+	&__link{
 		margin-top: 20px;
 	}
 }
