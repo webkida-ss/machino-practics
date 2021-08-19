@@ -27,7 +27,7 @@
 				<!-- 投稿一覧を表示 -->
 				<section class="section archive-news">
 					<h3 class="section__title">お知らせ</h3>
-					<div class="archive-news__content">
+					<div class="archive-news__container">
 						<?php if (have_posts()) : ?>
 							<ul class="archive-news__list">
 								<?php

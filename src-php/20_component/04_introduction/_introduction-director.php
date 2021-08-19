@@ -14,11 +14,15 @@ $post_id = $post->ID;
 			<?php the_field('director_msg', $post_id); ?>
 		</div>
 	</div>
-	<div class="util__link introduction-director__link">
-		<a href="<?php echo esc_url(home_url() . '/introduction'); ?>">
-			<span>店舗紹介を見る</span>
-			<span>店舗紹介を見る</span>
-		</a>
-	</div>
+
+	<!-- トップページの場合のみ表示 -->
+	<?php if (is_front_page()) : ?>
+		<div class="util__link introduction-director__link">
+			<a href="<?php echo esc_url(home_url() . '/introduction'); ?>">
+				<span>店舗紹介を見る</span>
+				<span>店舗紹介を見る</span>
+			</a>
+		</div>
+	<?php endif; ?>
 
 </section>
