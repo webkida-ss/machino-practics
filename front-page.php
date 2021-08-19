@@ -94,9 +94,7 @@
 				</section>
 
 				<!-- 院長挨拶：院長紹介・店舗紹介と同様の内容を表示 -->
-				<section class="section top-greeting">
-					<h3 class="section__title">院長挨拶</h3>
-				</section>
+				<?php get_template_part('src-php/20_component/04_introduction/_introduction-director'); ?>
 
 				<!-- 特徴 -->
 				<section class="section top-feature">
