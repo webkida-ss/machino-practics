@@ -8,6 +8,12 @@
 <body>
 	<div class="wrapper">
 
+		<?php
+		// トップページ投稿ID
+		$post_id = get_page_by_path('top')->ID;
+		?>
+
+
 		<!-------------------------------------------------- 
 		- ヘッダー|ナビゲーション|パンくずリスト
 		---------------------------------------------------->
@@ -48,26 +54,26 @@
 									<th>祝</th>
 								</tr>
 								<tr>
-									<td>午前　9:30～13:00</td>
-									<td>●</td>
-									<td>●</td>
-									<td>●</td>
-									<td>●</td>
-									<td>●</td>
-									<td>●</td>
-									<td>●</td>
-									<td>●</td>
+									<td><?php echo get_field('morning_schedule', $post_id)['time']; ?></td>
+									<td><?php echo get_field('morning_schedule', $post_id)['mon']; ?></td>
+									<td><?php echo get_field('morning_schedule', $post_id)['tue']; ?></td>
+									<td><?php echo get_field('morning_schedule', $post_id)['wed']; ?></td>
+									<td><?php echo get_field('morning_schedule', $post_id)['thu']; ?></td>
+									<td><?php echo get_field('morning_schedule', $post_id)['fri']; ?></td>
+									<td><?php echo get_field('morning_schedule', $post_id)['sat']; ?></td>
+									<td><?php echo get_field('morning_schedule', $post_id)['sun']; ?></td>
+									<td><?php echo get_field('morning_schedule', $post_id)['holi']; ?></td>
 								</tr>
 								<tr>
-									<td>午後　15:30～20:00</td>
-									<td>●</td>
-									<td>●</td>
-									<td>●</td>
-									<td>●</td>
-									<td>●</td>
-									<td>●</td>
-									<td>●</td>
-									<td>●</td>
+									<td><?php echo get_field('afternoon_schedule', $post_id)['time']; ?></td>
+									<td><?php echo get_field('afternoon_schedule', $post_id)['mon']; ?></td>
+									<td><?php echo get_field('afternoon_schedule', $post_id)['tue']; ?></td>
+									<td><?php echo get_field('afternoon_schedule', $post_id)['wed']; ?></td>
+									<td><?php echo get_field('afternoon_schedule', $post_id)['thu']; ?></td>
+									<td><?php echo get_field('afternoon_schedule', $post_id)['fri']; ?></td>
+									<td><?php echo get_field('afternoon_schedule', $post_id)['sat']; ?></td>
+									<td><?php echo get_field('afternoon_schedule', $post_id)['sun']; ?></td>
+									<td><?php echo get_field('afternoon_schedule', $post_id)['holi']; ?></td>
 								</tr>
 							</tbody>
 						</table>
@@ -103,10 +109,6 @@
 
 					</div>
 				</section>
-				<?php
-				// トップページのIDを指定する必要がある
-				$post_id = get_page_by_path('top')->ID;
-				?>
 				<!-- お客様の声：登録した分だけ表示 -->
 				<section class="section top-voice">
 					<h3 class="section__title">お客様の声</h3>
