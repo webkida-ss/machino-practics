@@ -4,7 +4,7 @@ $post = get_page_by_path('introduction');
 $post_id = $post->ID;
 ?>
 
-<section class="introduction-director">
+<section class="section introduction-director">
 	<h3 class="section__title">院長挨拶</h3>
 	<div class="introduction-director__container">
 		<div class="introduction-director__img">
