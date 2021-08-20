@@ -5,4 +5,16 @@
     background-repeat: no-repeat;
     background-position: center;
     height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__title{
+        font-weight: $font-weight-bold;
+        color: $white;
+        font-size: 3rem;
+        span{
+            opacity: 0;
+            transition: all $transition-change-time ease 0s;// 1文字あたりの表示時間
+        }
+    }
 }

@@ -22,9 +22,7 @@
 
 		<!-- トップ -->
 		<section class="top">
-			<div class="top-img">
-				<!-- <img src="<?php echo esc_url(get_template_directory_uri() . '/dist/img/接骨院1.jpg'); ?>" alt="トップ画像"> -->
-			</div>
+			<p class="top__title">街之接骨院です。ご来院お待ちしております。</p>
 		</section>
 
 		<!-------------------------------------------------- 
