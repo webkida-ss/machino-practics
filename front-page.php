@@ -102,13 +102,6 @@
 				<!-- 院長挨拶：院長紹介・店舗紹介と同様の内容を表示 -->
 				<?php get_template_part('src-php/20_component/04_introduction/_introduction-director'); ?>
 
-				<!-- 特徴 -->
-				<section class="section top-feature">
-					<h3 class="section__title">当院の特徴</h3>
-					<div class="top-feature__container">
-
-					</div>
-				</section>
 				<!-- お客様の声：登録した分だけ表示 -->
 				<section class="section top-voice">
 					<h3 class="section__title">お客様の声</h3>
