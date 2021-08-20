@@ -99,17 +99,32 @@
 				<!-- 特徴 -->
 				<section class="section top-feature">
 					<h3 class="section__title">当院の特徴</h3>
-				</section>
+					<div class="top-feature__container">
 
+					</div>
+				</section>
+				<?php
+				// トップページのIDを指定する必要がある
+				$post_id = get_page_by_path('top')->ID;
+				?>
 				<!-- お客様の声：登録した分だけ表示 -->
-				<section class="section top-cutomer-boice">
+				<section class="section top-voice">
 					<h3 class="section__title">お客様の声</h3>
-				</section>
-
-				<!-- よくある質問：質問の内よく聞かれるものを5件抜粋 -->
-				<section class="section top-qa">
-					<h3 class="section__title">よくある質問</h3>
-
+					<div class="top-voice__container">
+						<?php if (have_rows('voice_list', $post_id)) : ?>
+							<?php while (have_rows('voice_list', $post_id)) : the_row(); ?>
+								<div class="top-voice__item">
+									<div class="top-voice__item--img">
+										<img src="<?php the_sub_field('voice_list_img', $post_id); ?>" alt="メニュー画像">
+									</div>
+									<div class="top-voice__item--content">
+										<p class="top-voice__item--title"><?php the_sub_field('voice_list_title', $post_id); ?></p>
+										<p class="top-voice__item--msg"><?php the_sub_field('voice_list_msg', $post_id); ?></p>
+									</div>
+								</div>
+							<?php endwhile; ?>
+						<?php endif; ?>
+					</div>
 				</section>
 
 				<!-- お知らせ：最新の5件を取得 -->

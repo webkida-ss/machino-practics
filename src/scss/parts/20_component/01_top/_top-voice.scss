@@ -1,0 +1,30 @@
+.top-voice{
+    &__container{
+        margin-top: 20px;
+    }
+    &__item{
+        padding: 20px;
+        border: 10px outset $blue;
+        display: flex;
+        justify-content: space-between;
+        & + &{
+            margin-top: 20px;
+        }
+        &--img{
+            width: 100px;
+        }
+        &--content{
+            width: getMinus100Percent(100px + 20px);
+        }
+        &--title{
+            text-align: center;
+            border-bottom: 2px dotted $yellow;
+            padding-bottom: 5px;
+        }
+        &--msg{
+            padding: 5px;
+            margin-top: 20px;
+        }
+    }
+
+}
