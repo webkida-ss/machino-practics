@@ -1,6 +1,6 @@
 <section class="introduction-overview">
 	<h3 class="section__title">店舗概要</h3>
-	<div class="introduction-overview__content">
+	<div class="introduction-overview__container">
 		<table class="introduction-overview__table">
 			<tbody>
 				<tr>
