@@ -1,8 +1,28 @@
 .footer {
-	&__inner {
-		// 
+	&__upper{
+		padding: 40px 0;
+		background: $light-gray;
+		
+		&--img{	
+			width: 200px;
+			margin: 0 auto;
+		}
+		&--list{
+			display: flex;
+			justify-content: center;
+			li{
+				&:not(:first-child){
+					margin-left: 10px;
+				}
+			}
+		}
+
+	}
+	&__lower{
+
 	}
 	&__copy-right {
-		// 
+		padding: 10px 0;
+		text-align: center;
 	}
 }
