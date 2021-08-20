@@ -5,6 +5,6 @@
 <!-- <meta name="robots" content="noindex"> --><!-- 管理画面から設定 -->
 <title><?php the_title(); ?></title>
 <!-- タイトルは管理画面から設定するためphpには直接記述しない：直接書くと書いた内容が表示される -->
-<link rel="icon" href="favicon.ico">
+<!-- <link rel="icon" href="favicon.ico"> -->
 
 <?php wp_head() ?>
