@@ -12,9 +12,16 @@
         }
         &--img{
             width: 100px;
+            @include mq(tab) {
+                margin: 0 auto;
+            }
         }
         &--content{
             width: getMinus100Percent(100px + 15px);
+            @include mq(tab) {
+                width: 100%;
+                margin-top: 10px;
+            }
         }
         &--title{
             text-align: center;
@@ -27,6 +34,9 @@
             letter-spacing: 0.01em;    
             padding: 5px;
             margin-top: 15px;
+        }
+        @include mq(tab) {
+            display: block;
         }
     }
 
