@@ -1,5 +1,4 @@
 .introduction-overview {
-    padding: 20px 0;
     &__container{
     
     }
@@ -12,14 +11,14 @@
         }
         th,td{
             padding: 10px;
-            border: 1px solid $silver;
+            border: 1px solid $light-gray;
             vertical-align: middle;
         }
         th{
             color: $white;
             width: 100px;
             text-align: left;
-            background: $yellow;
+            background: $silver;
             
         }
     }
