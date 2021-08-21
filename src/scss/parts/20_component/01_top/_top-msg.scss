@@ -30,6 +30,9 @@
 				border-color: $yellow transparent transparent transparent;
 				content: '';
 			}
+			@include mq(sp) {
+				font-size: 1.6rem;
+			}
 		}
 	}
 	&__list {

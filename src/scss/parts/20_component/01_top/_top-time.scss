@@ -16,6 +16,9 @@
                     @include mq(tab-only) {
                         width: 150px;
                     }    
+                    @include mq(sp) {
+                        width: 130px;
+                    }
                 }
                 &:not(:first-child){
                     background: $light-gray;
