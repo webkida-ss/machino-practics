@@ -220,4 +220,7 @@ $container-margin-width-tab: 20px;
 // ------------------------------------------------------------
 .sidebar {
 	width: $sidebar-width-pc;
+	@include mq(tab-only) {
+		width: $sidebar-width-tab;
+	}
 }
