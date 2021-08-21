@@ -7,12 +7,10 @@ $black: #333333;
 $blue: #76a1b8;// base
 $silver: #afadad;// sub
 $yellow: #c9be72;// accent
-$light-gray: #ece7e7;
+$light-gray: rgba(238, 234, 234, 0.89);
 $white: #ffffff;
-$red: #e81919;
 
 // ---
-$color-active: $red; // アクティブ色
 $color-background-base: $white; // 背景色
 $color-text-base: $black; // テキスト色
 $hover-opacity: .6; // 透過度
