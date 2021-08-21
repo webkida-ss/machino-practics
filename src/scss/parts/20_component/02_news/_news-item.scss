@@ -8,9 +8,13 @@
 	&__link {
 		// 
 	}
+	&__term,&__date,&__title{
+		padding: 3px 0;
+	}
 	&__term {
 		width: 100px;
-		background: $light-gray;
+		background: $silver;
+		color: $white;
 		text-align: center;
 	}
 	&__date {

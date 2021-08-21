@@ -1,25 +1,29 @@
 .footer {
 	&__upper{
 		padding: 40px 0;
-		background: $light-gray;
-		
-		&--img{	
-			width: 200px;
-			margin: 0 auto;
-		}
-		&--list{
+		background: $silver;
+		color: $white;
+
+		&--container{
 			display: flex;
 			justify-content: center;
+			align-items: center;	
+		}
+		&--img{	
+			width: 200px;
+		}
+		&--list{
+			margin-left: 200px;
 			li{
 				&:not(:first-child){
-					margin-left: 10px;
+					margin-top: 10px;
 				}
 			}
 		}
 
 	}
 	&__lower{
-
+		background: linear-gradient(to bottom right, $white 0%, $blue 100%);
 	}
 	&__copy-right {
 		padding: 10px 0;
