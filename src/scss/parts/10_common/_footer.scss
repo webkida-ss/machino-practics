@@ -19,6 +19,9 @@
 					margin-top: 10px;
 				}
 			}
+			@include mq(sp) {
+				margin-left: auto;
+			}
 		}
 
 	}
