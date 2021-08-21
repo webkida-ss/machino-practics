@@ -45,6 +45,10 @@
             left: -130%;
             background:$light-gray;
             transform: skewX(-45deg);
+            @include mq(tab-only) {
+                left: -200%;
+                width:180%;
+            }
         }
         &:hover{
             a{
@@ -57,12 +61,21 @@
                 animation-name: skewanime;
                 animation-duration: .5s;
                 animation-fill-mode: forwards;
-            }
-            @keyframes skewanime {
-                100% {// 終点だけ定義
-                    // 画面の見えていない左から右へ移動する終了地点
-                    left:-10%;
+                @keyframes skewanime {
+                    100% {// 終点だけ定義
+                        // 画面の見えていない左から右へ移動する終了地点
+                        left:-10%;
+                    }
                 }
+                @include mq(tab-only) {
+                    @keyframes skewanime {
+                        100% {// 終点だけ定義
+                            // 画面の見えていない左から右へ移動する終了地点
+                            left:-40%;
+                        }
+                    }                        
+                }
+    
             }
         }    
 
