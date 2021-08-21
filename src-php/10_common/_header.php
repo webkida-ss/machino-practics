@@ -26,11 +26,13 @@
 			</div>
 			<!-- 予約 -->
 			<div class="header__reserve">
-				<div class="header__reserve--img">
-					<img src="<?php echo esc_url(get_template_directory_uri() . '/dist/img/LINE.png'); ?>" alt="LINEロゴ">
-				</div>
-				<span>LINEでの<br>ご予約・お問い合わせ</span>
+				<a href="<?php echo esc_url(home_url()); ?>">
+					<div class="header__reserve--img">
+						<img src="<?php echo esc_url(get_template_directory_uri() . '/dist/img/LINE.png'); ?>" alt="LINEロゴ">
+					</div>
+					<span>LINEでの<br>ご予約・お問い合わせ</span>
 			</div>
+			</a>
 		</div>
 	</div>
 </header>

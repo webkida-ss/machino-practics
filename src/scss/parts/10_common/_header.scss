@@ -7,6 +7,7 @@
 	// left: 0;
 	z-index: map-get($layer,header);
 	width: 100%;
+
 	@include mq(sp) {
 		font-size: 1rem;
 	}
@@ -48,7 +49,7 @@
 
 		@include mq(sp) {
 			width: 80px;
-			height: 80px;				
+			height: 80px;
 		}
 		img {
 			width: 100%;
@@ -70,6 +71,7 @@
 
 		$info-pseudo-size-pc: 80px;
 		$info-pseudo-size-sp: 45px;
+		$info-tel-size: 20px;
 		div {
 			&:not(:first-child) {
 				margin-top: 10px;
@@ -78,12 +80,12 @@
 		&--address {
 			// 
 		}
-		$info-tel-size: 20px;
 		&--phone {
 			position: relative;
 			padding-left: $info-tel-size + 10px;
 			font-weight: $font-weight-bold;
 			font-size: 2rem;
+
 			@include mq(sp) {
 				font-size: 1.2rem;
 			}
@@ -106,6 +108,7 @@
 			position: relative;
 			padding: 5px 0;
 			padding-left: $info-pseudo-size-pc + 10px;
+
 			@include mq(sp) {
 				padding-left: $info-pseudo-size-sp + 5px;
 			}
@@ -119,6 +122,7 @@
 				background: $yellow;
 				color: $white;
 				text-align: center;
+
 				@include mq(sp) {
 					width: $info-pseudo-size-sp;
 				}
@@ -142,16 +146,17 @@
 		display: flex;
 		align-items: center;
 		font-size: 1.6rem;
+
 		@include mq(sp) {
 			font-size: 1.2rem;
-		}
-		&--img {
-			width: 50px;
-			height: 50px;
 		}
 		@include mq(sp) {
 			display: block;
 			font-size: 1rem;
+		}
+		&--img {
+			width: 50px;
+			height: 50px;
 		}
 	}
 }
