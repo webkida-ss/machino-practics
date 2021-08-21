@@ -16,7 +16,7 @@
 
 			&.btn-contact,
 			&.btn-introduction,
-            &.btn-line {
+			&.btn-line {
 				&::before {
 					display: block;
 					position: absolute;
@@ -41,100 +41,109 @@
 					background-image: url(../img/店舗紹介.png);
 				}
 			}
-            &.btn-line{
+			&.btn-line {
 				&::before {
+					left: 5px;
 					width: 30px;
 					height: 30px;
-                    left: 5px;
 					background-image: url(../img/LINE.png);
 				}
-            }
+			}
 		}
 	}
 
 	// リンク ---------------------------------------------
 	.links {
+		padding: 10px;
 		border: $sidebar-border;
-        padding: 10px;
-        h2{
-            padding-bottom: 10px;
-            border-bottom: 2px solid $blue;
-            text-align: center;
-        }
-        ul{
-            margin-top: 10px;
-        }
-        li{
-            &:not(:first-child){
-                margin-top: 5px;
-            }
-            padding-left: 20px;
-            position: relative;
-            &::before{
-                display: block;
-                position: absolute;
-                top: 50%;
-                left: 0px;
-                transform: translateY(-50%);
-                width: 10px;
-                height: 10px;
-                background-image: url(../img/チェックボックス.png);
-                background-position: center;
-                background-size: cover;
-                background-repeat: no-repeat;
-                content: '';
-            }
+		h2 {
+			padding-bottom: 10px;
+			text-align: center;
 
-        }
+			border-bottom: 2px solid $blue;
+		}
+		ul {
+			margin-top: 10px;
+		}
+		li {
+			position: relative;
+			padding-left: 20px;
+			&:not(:first-child) {
+				margin-top: 5px;
+			}
+			&::before {
+				display: block;
+				position: absolute;
+				top: 50%;
+				left: 0px;
+				transform: translateY(-50%);
+				width: 10px;
+				height: 10px;
+				background-image: url(../img/チェックボックス.png);
+				background-position: center;
+				background-size: cover;
+				background-repeat: no-repeat;
+				content: '';
+			}
+		}
 	}
 
 	// 店舗紹介 ---------------------------------------------
 	.introduction {
-        padding: 10px;
+		padding: 10px;
 		border: $sidebar-border;
-        .logo,.top-img{
-            width: 200px;
-            margin: 0 auto;
-        }
-        .phone{
-            position: relative;
-            font-weight: $font-weight-bold;
-            &::before {
-                display: block;
-                position: absolute;
-                top: 50%;
-                left: 25px;
-                transform: translateY(-50%);
-                width: 20px;
-                height: 20px;
-                background-image: url(../img/電話.png);
-                background-position: center;
-                background-size: cover;
-                background-repeat: no-repeat;
-                content: '';
-            }
-        }
-        .wp-block-buttons{
-            .wp-block-button{
-                margin-bottom: 0;
-                &.btn-access{
-                    a {
-                        display: block;
-                        border-color: $yellow;
-                        background: $yellow;
-                        border-radius: 0;
-                        &:hover {
-                            background: $blue;
-                        }
-                    }
-                }
-            }
-        }
+		.logo,
+		.top-img {
+			width: 100%;
+			margin: 0 auto;
+		}
+		.phone {
+			position: relative;
+			font-weight: $font-weight-bold;
+
+			@include mq(tab-only) {
+				padding-left: 12px;
+			}
+			&::before {
+				display: block;
+				position: absolute;
+				top: 50%;
+				left: 25px;
+				transform: translateY(-50%);
+				width: 20px;
+				height: 20px;
+				background-image: url(../img/電話.png);
+				background-position: center;
+				background-size: cover;
+				background-repeat: no-repeat;
+				content: '';
+
+				@include mq(tab-only) {
+					left: 10px;
+				}
+			}
+		}
+		.wp-block-buttons {
+			.wp-block-button {
+				margin-bottom: 0;
+				&.btn-access {
+					a {
+						display: block;
+						border-color: $yellow;
+						border-radius: 0;
+						background: $yellow;
+						&:hover {
+							background: $blue;
+						}
+					}
+				}
+			}
+		}
 	}
 
 	// Twitter ---------------------------------------------
 	.twitter {
-        padding: 10px;
+		padding: 10px;
 		border: $sidebar-border;
 		.wp-block-group__inner-container {
 			p {
