@@ -148,6 +148,7 @@ $util-link-border-size: 3px;
 				width: 100%;
 				height: 100%;
 				transition: .5s;
+
 				transform-style: preserve-3d;
 				&:first-child {
 					// はじめは回転なし
@@ -201,12 +202,17 @@ $sidebar-width-pc: 230px;
 $sidebar-width-tab: 150px;
 $sidebar-width-sp: 100px;
 $container-margin-width-pc: 30px;
+$container-margin-width-tab: 20px;
 
 // ------------------------------------------------------------
 // main
 // ------------------------------------------------------------
 .main {
 	width: getMinus100Percent($sidebar-width-pc + $container-margin-width-pc );
+
+	@include mq(tab-only) {
+		width: getMinus100Percent($sidebar-width-tab + $container-margin-width-tab );
+	}
 }
 
 // ------------------------------------------------------------
