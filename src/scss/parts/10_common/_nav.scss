@@ -22,6 +22,9 @@
             display: block;
             color: $blue;
             font-size: 1rem;
+            @include mq(sp) {
+                overflow-wrap: anywhere;
+            }
         }
         // 左右にボーダー
         border-right: 1px solid $blue;
@@ -49,6 +52,10 @@
                 left: -200%;
                 width:180%;
             }
+            @include mq(sp) {
+                left: -240%;
+                width:180%;
+            }
         }
         &:hover{
             a{
@@ -73,9 +80,16 @@
                             // 画面の見えていない左から右へ移動する終了地点
                             left:-40%;
                         }
-                    }                        
+                    }
                 }
-    
+                @include mq(sp) {
+                    @keyframes skewanime {
+                        100% {// 終点だけ定義
+                            // 画面の見えていない左から右へ移動する終了地点
+                            left:-40%;
+                        }
+                    }
+                }
             }
         }    
 
