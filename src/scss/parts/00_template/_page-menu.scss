@@ -6,6 +6,9 @@
 	&__item {
 		display: flex;
 		justify-content: space-between;
+		@include mq(tab) {
+			display: block;
+		}
 
 		& + & {
 			margin-top: 25px;
@@ -13,9 +16,17 @@
 
 		&--img {
 			width: 200px;
+			@include mq(tab) {
+				width: 100px;
+				margin: 0 auto;
+			}
+
 		}
 		&--content {
 			width: getMinus100Percent(200px + 15px);
+			@include mq(tab) {
+				width: 100%;
+			}
 		}
 		&--title {
 			text-align: center;
