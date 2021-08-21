@@ -53,15 +53,17 @@
 		&::after {
 			display: block;
 			position: absolute;
-			top: 10px;
-			left: 7px;
-			transform: rotate(45deg);
+			top: 50%;
+			left: 0px;
+			transform: rotate(45deg) translateY(-10px);
 			width: 7px;
 			height: 10px;
 			content: '';
 
 			border-bottom: 2px solid $blue;
 			border-right: 2px solid $blue;
+			@include mq(tab-only) {
+			}
 		}
 	}
 }
