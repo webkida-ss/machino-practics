@@ -13,6 +13,9 @@
                 padding: 10px 0;
                 &:first-child{
                     width: 200px;
+                    @include mq(tab-only) {
+                        width: 150px;
+                    }    
                 }
                 &:not(:first-child){
                     background: $light-gray;
