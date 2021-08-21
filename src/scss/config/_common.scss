@@ -213,6 +213,9 @@ $container-margin-width-tab: 20px;
 	@include mq(tab-only) {
 		width: getMinus100Percent($sidebar-width-tab + $container-margin-width-tab );
 	}
+	@include mq(sp) {
+		width: 100%;
+	}
 }
 
 // ------------------------------------------------------------
@@ -222,5 +225,8 @@ $container-margin-width-tab: 20px;
 	width: $sidebar-width-pc;
 	@include mq(tab-only) {
 		width: $sidebar-width-tab;
+	}
+	@include mq(sp) {
+		display: none;
 	}
 }
