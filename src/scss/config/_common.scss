@@ -5,21 +5,21 @@
 	padding-bottom: 40px;
 	&__title {
 		margin-bottom: 30px;
+		padding: 10px 5px;
+		color: $blue;
 		font-weight: $font-weight-bold;
 		font-size: 2rem;
-		color: $blue;
-		padding: 10px 5px;
+
 		border-top: 1px solid $silver;
 		border-left: 1px solid $silver;
 		border-right: 1px solid $silver;
 		border-bottom: 3px solid $blue;
-		
 		@include mq(sp) {
 			// font-size: *rem;
 		}
 	}
 }
-.section-spacer{
+.section-spacer {
 	margin-top: 20px;
 }
 
@@ -134,6 +134,7 @@ $util-link-border-size: 3px;
 
 		a {
 			display: block;
+			position: relative;
 			width: 100%;
 			height: 100%;
 			border-width: $util-link-border-size;
@@ -141,42 +142,42 @@ $util-link-border-size: 3px;
 			border-color: $blue;
 			color: $blue;
 			transition: all $transition-change-time ease 0s;
+			span {
+				display: block;
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				transition: .5s;
+				// 3D
 
-			position: relative;
-            span{
-                display: block;
-                position: absolute;
-                width: 100%;
-                height: 100%;
-                // 3D
-                transform-style: preserve-3d;
-                transition: 0.5s;
-                &:first-child{
-                    // はじめは回転なし
-                    transform: rotateX(0deg);
-                    transform-origin: 50px 50% -25px;
-                    background: $white;
-                }
-                &:nth-child(2){
-                    transform: rotateX(90deg);
-                    transform-origin: 0 50% -25px;
-                    background: $blue;
-                    color: $white;
-                }
-            }
-            // rotateX(90deg)している方は裏側にいくため、spanからだとホバーできないのでaタグにhover
-            &:hover{
-                span{
-                    &:first-child{
-                        transform: rotateX(-90deg);
-                    }
-                    &:nth-child(2){
-                        transform: rotateX(0deg);
-                    }
-                }
-                border-color: $white;
-            }
+				transform-style: preserve-3d;
+				&:first-child {
+					// はじめは回転なし
+					transform: rotateX(0deg);
+					background: $white;
 
+					transform-origin: 50px 50% -25px;
+				}
+				&:nth-child(2) {
+					transform: rotateX(90deg);
+					background: $blue;
+					color: $white;
+
+					transform-origin: 0 50% -25px;
+				}
+			}
+			// rotateX(90deg)している方は裏側にいくため、spanからだとホバーできないのでaタグにhover
+			&:hover {
+				border-color: $white;
+				span {
+					&:first-child {
+						transform: rotateX(-90deg);
+					}
+					&:nth-child(2) {
+						transform: rotateX(0deg);
+					}
+				}
+			}
 		}
 	}
 }
@@ -192,15 +193,14 @@ $util-link-border-size: 3px;
 // container （メインとサイドバーをラップ）
 // ------------------------------------------------------------
 .container {
-	margin-top: 20px;
 	display: flex;
 	justify-content: space-between;// 両端寄せ
+	margin-top: 50px;
 }
 
 $sidebar-width-pc: 230px;
 $sidebar-width-tab: 150px;
 $sidebar-width-sp: 100px;
-
 $container-margin-width-pc: 30px;
 
 // ------------------------------------------------------------
