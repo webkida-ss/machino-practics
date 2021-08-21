@@ -39,7 +39,7 @@ body {
 	// overflow-wrap: break-word;// ブラウザがテキストボックスに改行を入れる場合に文字の途中でも改行する
 	// word-break
 	@include mq(sp) {
-		padding-top: $header-height-sp;
+		font-size: 1.2rem;
 	}
 }
 
