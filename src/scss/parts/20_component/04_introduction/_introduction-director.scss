@@ -1,18 +1,20 @@
 .introduction-director {
     &__container{
-        margin-top: 20px;
         display: flex;
     }
     &__img{
-        width: 200px;
-        height: 200px;
+        width: 180px;
+        height: 180px;
         img{
             width: 100%;
         }
     }
     &__msg{
-        padding-left: 20px;
-        width: calc(100% - 200px);
+        @include lhCrop(1.5);
+        line-height: 1.5;
+        letter-spacing: 0.01em;
+        padding-left: 10px;
+        width: calc(100% - 180px);
     }
     &__link{
         margin-top: 20px;
