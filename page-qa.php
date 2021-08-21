@@ -28,7 +28,7 @@
 					<div class="page-qa__content">
 						<dl class="page-qa__list">
 							<div class="page-qa__item">
-								<dt class="page-qa__item--head js-accordion">質問1</dt>
+								<dt class="page-qa__item--head js-accordion is-open">質問1</dt>
 								<dd class="page-qa__item--body">
 									解答が入ります。解答が入ります。解答が入ります。解答が入ります。解答が入ります。
 									解答が入ります。解答が入ります。解答が入ります。解答が入ります。解答が入ります。
@@ -36,7 +36,7 @@
 								</dd>
 							</div>
 							<div class="page-qa__item">
-								<dt class="page-qa__item--head js-accordion">質問2</dt>
+								<dt class="page-qa__item--head js-accordion is-open">質問2</dt>
 								<dd class="page-qa__item--body">
 									解答が入ります。解答が入ります。解答が入ります。解答が入ります。解答が入ります。
 									解答が入ります。解答が入ります。解答が入ります。解答が入ります。解答が入ります。
@@ -44,7 +44,7 @@
 								</dd>
 							</div>
 							<div class="page-qa__item">
-								<dt class="page-qa__item--head js-accordion">質問3</dt>
+								<dt class="page-qa__item--head js-accordion is-open">質問3</dt>
 								<dd class="page-qa__item--body">
 									解答が入ります。解答が入ります。解答が入ります。解答が入ります。解答が入ります。
 									解答が入ります。解答が入ります。解答が入ります。解答が入ります。解答が入ります。
@@ -52,7 +52,7 @@
 								</dd>
 							</div>
 							<div class="page-qa__item">
-								<dt class="page-qa__item--head js-accordion">質問4</dt>
+								<dt class="page-qa__item--head js-accordion is-open">質問4</dt>
 								<dd class="page-qa__item--body">
 									解答が入ります。解答が入ります。解答が入ります。解答が入ります。解答が入ります。
 									解答が入ります。解答が入ります。解答が入ります。解答が入ります。解答が入ります。
@@ -60,7 +60,7 @@
 								</dd>
 							</div>
 							<div class="page-qa__item">
-								<dt class="page-qa__item--head js-accordion">質問5</dt>
+								<dt class="page-qa__item--head js-accordion is-open">質問5</dt>
 								<dd class="page-qa__item--body">
 									解答が入ります。解答が入ります。解答が入ります。解答が入ります。解答が入ります。
 									解答が入ります。解答が入ります。解答が入ります。解答が入ります。解答が入ります。
