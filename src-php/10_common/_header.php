@@ -21,8 +21,8 @@
 			<div class="header__info">
 				<div class="header__info--address">東京都新宿区新宿1丁目1−1-1</div>
 				<div class="header__info--phone">03-0000-0000</div>
-				<div class="header__info--time">9:00〜20:00</div>
-				<div class="header__info--holiday">木曜日</div>
+				<div class="header__info--time">9:30〜20:00</div>
+				<div class="header__info--holiday">日曜・祝日午後</div>
 			</div>
 			<!-- 予約 -->
 			<div class="header__reserve">

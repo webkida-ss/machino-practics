@@ -1,20 +1,20 @@
-.top{
-    margin-top: 20px;
-    background-image: url(../img/接骨院1.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 500px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    &__title{
-        font-weight: $font-weight-bold;
-        color: $white;
-        font-size: 3rem;
-        span{
-            opacity: 0;
-            transition: all $transition-change-time ease 0s;// 1文字あたりの表示時間
-        }
-    }
+.top {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 500px;
+	margin-top: 40px;
+	background-image: url(../img/接骨院1.jpg);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	&__title {
+		color: $white;
+		font-weight: $font-weight-bold;
+		font-size: 3rem;
+		span {
+			opacity: 0;
+			transition: all $transition-change-time ease 0s;// 1文字あたりの表示時間
+		}
+	}
 }
