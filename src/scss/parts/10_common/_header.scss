@@ -7,27 +7,28 @@
 	// left: 0;
 	z-index: map-get($layer,header);
 	width: 100%;
-
 	@include mq(sp) {
-		height: $header-height-sp;
+		font-size: 1rem;
 	}
-
-
 	// ヘッダー上部 -------------------------------------------------------
-	&__upper{
+	&__upper {
 		padding: 5px 0;
 		background: $blue;
 		color: $white;
-		
-		&--inner{
+
+		&--inner {
 			display: flex;
-			align-items: center;
 			justify-content: space-between;
+			align-items: center;
 		}
-		h1{
+		h1 {
 			font-weight: normal;
+
+			@include mq(sp) {
+				width: 70%;
+			}
 		}
-		&--sitemap{
+		&--sitemap {
 			// 
 		}
 	}
@@ -35,8 +36,8 @@
 	// ヘッダー下部 -------------------------------------------------------
 	&__lower {
 		display: flex;
-		align-items: center;
 		justify-content: space-between;
+		align-items: center;
 		padding-top: 20px;
 	}
 	&__title {
@@ -44,6 +45,11 @@
 		width: 100px;
 		height: 100px;
 		transition: opacity $transition-change-time ease 0s;
+
+		@include mq(sp) {
+			width: 80px;
+			height: 80px;				
+		}
 		img {
 			width: 100%;
 			height: 100%;
@@ -54,81 +60,98 @@
 			cursor: pointer;
 		}
 	}
-	&__container{
+	&__container {
 		display: flex;
 		align-items: center;
 	}
-	&__info{
+	&__info {
 		margin-right: 15px;
-		div{
-			&:not(:first-child){
+		// 疑似要素
+
+		$info-pseudo-size-pc: 80px;
+		$info-pseudo-size-sp: 45px;
+		div {
+			&:not(:first-child) {
 				margin-top: 10px;
 			}
 		}
-		&--address{
-		// 
+		&--address {
+			// 
 		}
-		&--phone{
-			$info-tel-size: 20px;
-			font-size: 2rem;
-			font-weight: $font-weight-bold;
-			padding-left: $info-tel-size + 10px;
+		$info-tel-size: 20px;
+		&--phone {
 			position: relative;
-			&::before{
+			padding-left: $info-tel-size + 10px;
+			font-weight: $font-weight-bold;
+			font-size: 2rem;
+			@include mq(sp) {
+				font-size: 1.2rem;
+			}
+
+			&::before {
 				display: block;
-				content: '';
-				width: $info-tel-size;
-				height: $info-tel-size;
 				position: absolute;
 				top: 0;
 				left: 0;
+				width: $info-tel-size;
+				height: $info-tel-size;
 				background-image: url(../img/電話.png);
+				background-position: center;
 				background-size: cover;
 				background-repeat: no-repeat;
-				background-position: center;
+				content: '';
+			}
+		}
+		%info-pseudo {
+			position: relative;
+			padding: 5px 0;
+			padding-left: $info-pseudo-size-pc + 10px;
+			@include mq(sp) {
+				padding-left: $info-pseudo-size-sp + 5px;
+			}
+			&::before {
+				display: inline-block;
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: $info-pseudo-size-pc;
+				padding: 5px 0;
+				background: $yellow;
+				color: $white;
+				text-align: center;
+				@include mq(sp) {
+					width: $info-pseudo-size-sp;
+				}
 			}
 		}
 
-		// 疑似要素
-		$info-pseudo-size: 80px;
-		%info-pseudo{
-			position: relative;
-			padding-left: $info-pseudo-size + 10px;
-			padding: 5px 0;
-			&::before{
-				padding: 5px 0;
-				background: #c9be72;
-				text-align: center;
-				display: inline-block;
-				width: $info-pseudo-size;
-				position: absolute;
-				top: 0;
-				left: 0;
-				color: $white;
+		&--time {
+			@extend %info-pseudo;
+			&::before {
+				content: '営業時間';
 			}
 		}
-		
-		&--time{
+		&--holiday {
 			@extend %info-pseudo;
-			&::before{
-				content: '営業時間';
-			}		
-		}
-		&--holiday{
-			@extend %info-pseudo;
-			&::before{
+			&::before {
 				content: '定休日';
-			}		
+			}
 		}
 	}
-	&__reserve{
+	&__reserve {
 		display: flex;
 		align-items: center;
 		font-size: 1.6rem;
-		&--img{
+		@include mq(sp) {
+			font-size: 1.2rem;
+		}
+		&--img {
 			width: 50px;
 			height: 50px;
 		}
-		
+		@include mq(sp) {
+			display: block;
+			font-size: 1rem;
+		}
 	}
 }
