@@ -9,9 +9,11 @@
 	background-size: cover;
 	background-repeat: no-repeat;
 	&__title {
+		width: 90%;
 		color: $white;
 		font-weight: $font-weight-bold;
 		font-size: 3rem;
+		// overflow-wrap: break-word;
 		span {
 			opacity: 0;
 			transition: all $transition-change-time ease 0s;// 1文字あたりの表示時間
