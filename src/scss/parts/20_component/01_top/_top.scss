@@ -14,10 +14,20 @@
 		font-weight: $font-weight-bold;
 		font-size: 3rem;
 		margin: 0 auto;
-		// overflow-wrap: break-word;
+		display: flex;
+		justify-content: center;
+		// スマホにて表示崩れを回避
+		@include mq(sp) {
+			display: block;
+		}
 		span {
+			display: block;
 			opacity: 0;
 			transition: all $transition-change-time ease 0s;// 1文字あたりの表示時間
+			// スマホにて表示崩れを回避
+			@include mq(sp) {
+				display: inline;
+			}
 		}
 	}
 }
