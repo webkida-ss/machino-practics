@@ -1,6 +1,5 @@
 jQuery(function () {
 
-
 	/*********************************************
 	 * 1文字ずつ表示
 	 * jQuery
@@ -33,11 +32,22 @@ jQuery(function () {
 	 * jQuery
 	 *********************************************/
 	jQuery('.js-accordion').click(function () {
-
 		// 解答結果の表示
 		jQuery(this).next().slideToggle(); // display: none;を制御
 
 		// ヘッドの表示制御
 		jQuery(this).toggleClass('is-open');
+	});
+
+	/*********************************************
+	 * タブメニュー制御
+	 * jQuery
+	 *********************************************/
+	let tab_menus = jQuery('.js-tab-menu');
+	tab_menus.click(function () {
+		jQuery('.tab-active').removeClass('tab-active'); // tab-activeクラスを消す
+		jQuery(this).addClass('tab-active'); // クリックした箇所にtab-activeクラスを追加
+		let index = tab_menus.index(this);
+		jQuery('.js-tab-item').eq(index).addClass('tab-active');
 	});
 })

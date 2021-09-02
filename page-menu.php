@@ -23,6 +23,7 @@
 			- メイン
 			---------------------------->
 			<main class="main">
+				<!-- メニュー -->
 				<section class="section page-menu">
 					<h3 class="section__title"><?php the_title(); ?></h3>
 					<div class="page-menu__container">
@@ -55,6 +56,10 @@
 						<?php endif; ?>
 					</div>
 				</section>
+
+				<!-- オプション -->
+				<?php get_template_part('src-php/20_component/05_menu/_menu-option'); ?>
+
 			</main>
 
 			<!-------------------------- 
