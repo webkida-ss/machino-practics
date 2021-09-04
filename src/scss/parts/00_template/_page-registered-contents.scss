@@ -1,6 +1,10 @@
 .page-registered-contents{
     &__container{
         padding-left: 20px;
+        @include mq(tab) {
+            padding-left: 0px;
+        }
+
         p{
             @include lhCrop(1.5);
             line-height: 1.5;

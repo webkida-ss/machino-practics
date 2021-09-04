@@ -1,6 +1,10 @@
 .page-profile{
     &__container{
         padding-left: 20px;
+        @include mq(tab) {
+            padding-left: 0px;
+        }
+
         li{
             &:not(:first-child()){
                 margin-top: 15px;

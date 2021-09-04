@@ -1,6 +1,10 @@
 .page-register{
     &__container{
         padding-left: 20px;
+        @include mq(tab) {
+            padding-left: 0px;
+        }
+
         ul,li{
             margin-top: 15px;
         }

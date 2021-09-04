@@ -1,6 +1,9 @@
 .page-login{
     &__container{
         padding-left: 20px;
+        @include mq(tab) {
+            padding-left: 0px;
+        }
         a{
             display: block;
             margin-top: 15px;
