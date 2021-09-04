@@ -25,7 +25,7 @@
 			<main class="main">
 				<section class="section page-profile">
 					<h3 class="section__title"><?php the_title(); ?></h3>
-					<div class="page-profile__content">
+					<div class="page-profile__container">
 						<?php the_content(); ?>
 					</div>
 				</section>

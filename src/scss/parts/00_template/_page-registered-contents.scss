@@ -1,8 +1,12 @@
 .page-registered-contents{
     &__container{
+        padding-left: 10px;
         p{
             @include lhCrop(1.5);
             line-height: 1.5;
+            &:first-child{
+                font-weight: $font-weight-bold;
+            }
             &:not(:first-child){
                 margin-top: 15px;
             }
