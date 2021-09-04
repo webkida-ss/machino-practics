@@ -25,7 +25,7 @@
 			<main class="main">
 				<section class="section page-registered-contents">
 					<h3 class="section__title"><?php the_title(); ?></h3>
-					<div class="page-registered-contents__content">
+					<div class="page-registered-contents__container">
 						<?php the_content(); ?>
 					</div>
 				</section>

@@ -1,3 +1,11 @@
 .page-registered-contents{
-    
+    &__container{
+        p{
+            @include lhCrop(1.5);
+            line-height: 1.5;
+            &:not(:first-child){
+                margin-top: 15px;
+            }
+        }
+    }
 }
