@@ -25,7 +25,7 @@
 			<main class="main">
 				<section class="section page-login">
 					<h3 class="section__title"><?php the_title(); ?></h3>
-					<div class="page-login__content">
+					<div class="page-login__container">
 						<?php the_content(); ?>
 					</div>
 				</section>

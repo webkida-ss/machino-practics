@@ -1,3 +1,8 @@
 .page-login{
-    
+    &__container{
+        a{
+            display: block;
+            margin-top: 15px;
+        }
+    }
 }
