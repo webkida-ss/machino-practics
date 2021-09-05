@@ -26,7 +26,7 @@
 				<!-- メニュー -->
 				<section class="section single-product">
 					<h3 class="section__title"><?php the_title(); ?></h3>
-					<div class="single-asp-product__container">
+					<div class="single-product__container">
 						<?php the_content(); ?>
 					</div>
 				</section>

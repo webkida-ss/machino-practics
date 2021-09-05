@@ -1,0 +1,36 @@
+.single-product{
+    &__container{
+        .asp_product_item {
+            .asp_product_thumbnail {
+                width: 200px;
+            }
+    
+            .asp_product_title {
+                margin-top: 15px;
+            }
+    
+            .asp_product_description {
+                p {
+                    line-height: 1.5;
+    
+                    @include lhCrop(1.5);
+                    &:not(:first-child) {
+                        margin-top: 10px;
+                    }
+                }
+            }
+    
+            .asp_price_container {
+                margin-top: 20px;
+                .asp_under_price_line {
+                    margin-top: 10px;
+                }
+    
+                .asp_price_full_total {
+                    margin-top: 10px;
+                }
+            }
+        }
+    
+    }
+}
