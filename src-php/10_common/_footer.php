@@ -15,6 +15,13 @@
 					<li><a href="<?php echo esc_url(home_url() . '/qa'); ?>">Q&A</a></li>
 					<li><a href="<?php echo esc_url(home_url() . '/contact'); ?>">お問い合わせ</a></li>
 				</ul>
+				<ul>
+					<li><a href="<?php echo esc_url(home_url() . '/register'); ?>">会員登録</a></li>
+					<li><a href="<?php echo esc_url(home_url() . '/login'); ?>">ログイン</a></li>
+					<li><a href="<?php echo esc_url(home_url() . '/profile'); ?>">プロフィール</a></li>
+					<li><a href="<?php echo esc_url(home_url() . '/registered-contents'); ?>">会員限定ページ</a></li>
+					<li><a href="<?php echo esc_url(home_url() . '/product/sample'); ?>">商品購入</a></li>
+				</ul>
 			</div>
 		</div><!-- /.footer__upper--container -->
 	</div>
