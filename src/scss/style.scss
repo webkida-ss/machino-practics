@@ -11,8 +11,10 @@
 
 // WPテンプレート ----------------------------------------------
 @import 'parts/00_template/_archive-news';
+@import 'parts/00_template/_archive-product';
 @import 'parts/00_template/_single-news';
 @import 'parts/00_template/_single-asp-products';
+@import 'parts/00_template/_single-product';
 @import 'parts/00_template/_page-menu';
 @import 'parts/00_template/_page-qa';
 @import 'parts/00_template/_page-introduction';
@@ -53,3 +55,6 @@
 
 // メニュー
 @import 'parts/20_component/05_menu/_menu-option';
+
+// 商品
+@import 'parts/20_component/06_product/_product-item';

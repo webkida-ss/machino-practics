@@ -1,0 +1,26 @@
+.product-item {
+	padding: 10px 0;
+
+	border-bottom: 1px solid $light-gray;
+	a {
+		display: flex;
+	}
+	&__link {
+		// 
+	}
+	&__term,&__date,&__title{
+		padding: 3px 0;
+	}
+	&__term {
+		width: 100px;
+		background: $silver;
+		color: $white;
+		text-align: center;
+	}
+	&__date {
+		margin-left: 20px;
+	}
+	&__title {
+		margin-left: 20px;
+	}
+}
