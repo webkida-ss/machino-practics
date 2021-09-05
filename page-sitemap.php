@@ -37,6 +37,7 @@
 							<li class="page-sitemap__item"><a href="<?php echo esc_url(home_url() . '/login') ?>">ログイン</a></li>
 							<li class="page-sitemap__item"><a href="<?php echo esc_url(home_url() . '/profile') ?>">プロフィール</a></li>
 							<li class="page-sitemap__item"><a href="<?php echo esc_url(home_url() . '/registered-contents') ?>">会員限定ページ</a></li>
+							<li class="page-sitemap__item"><a href="<?php echo esc_url(home_url() . '/product/sample') ?>">商品購入</a></li>
 						</ul>
 					</div>
 				</section>
