@@ -106,6 +106,15 @@ add_action('wp_enqueue_scripts', function () {
 	wp_enqueue_script('script', get_template_directory_uri() . '/dist/js/script.min.js', array('jquery'), '1.0.0', true);
 });
 
+/************************************************************************
+ * WordPress・テーマ・プラグインの更新メールなし
+ ************************************************************************/
+//「Wordpress本体」の自動更新メール通知を停止する
+add_filter('auto_core_update_send_email', '__return_false');
+// 「プラグイン」の自動更新メール通知を停止する
+add_filter('auto_plugin_update_send_email', '__return_false');
+// 「テーマ」の自動更新メール通知を停止する
+add_filter('auto_theme_update_send_email', '__return_false');
 
 /************************************************************************
  * ファイル取込み
